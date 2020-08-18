@@ -1,0 +1,23 @@
+spring:
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
+  flyway:
+    enabled: false
+logging:
+  level:
+    com.zaxxer.hikari.HikariConfig: DEBUG
+    com.zaxxer.hikari: TRACE
+tenants:
+  datasources:
+    master:
+      jdbcUrl: jdbc:mysql://localhost:3306/master?useUnicode=true&characterEncoding=utf8&useSSL=false&createDatabaseIfNotExist=true
+      driverClassName: com.mysql.jdbc.Driver
+      username: root
+#    vw:
+#      jdbcUrl: jdbc:mysql://localhost:3307/tenant1?useUnicode=true&characterEncoding=utf8&useSSL=false&createDatabaseIfNotExist=true
+#      driverClassName: com.mysql.jdbc.Driver
+#      username: root
+#    bmw:
+#      jdbcUrl: jdbc:mysql://localhost:3308/tenant2?useUnicode=true&characterEncoding=utf8&useSSL=false&createDatabaseIfNotExist=true
+#      driverClassName: com.mysql.jdbc.Driver
+#      username: root
